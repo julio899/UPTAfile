@@ -12,4 +12,4 @@ Una iniciativa creativa iniciada principalmente para un bien común en cuanto a 
 
     y mucha Creatividad con Actitud.
 
-Portal Temporal de la Aplicacion -> http://ktuxca.com/UPTA y  http://upta.ktuxca.com
+Portal Temporal de la Aplicacion -> 
