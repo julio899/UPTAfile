@@ -1,6 +1,6 @@
-*** crear link para phpmyadmin
+# *** crear link para phpmyadmin
 ln -s /usr/share/phpmyadmin /var/www/phpmyadmin
 
-*** Crear usuario con privilegios root
-CREATE USER 'ktuxcaco_upta'@'localhost' IDENTIFIED BY 'V18266159.';# MySQL ha devuelto un conjunto de valores vacío (es decir: cero columnas).
-GRANT ALL PRIVILEGES ON *.* TO 'ktuxcaco_upta'@'localhost' WITH GRANT OPTION;# MySQL ha devuelto un conjunto de valores vacío (es decir: cero columnas).
+# *** Crear usuario con privilegios root
+CREATE USER 'ktuxcaco_upta'@'localhost' IDENTIFIED BY 'V18266159.';
+GRANT ALL PRIVILEGES ON *.* TO 'ktuxcaco_upta'@'localhost' WITH GRANT OPTION;
