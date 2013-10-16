@@ -1,11 +1,3 @@
-function mostrar_propiedades(obj, objName) { 
-   var result = ""; 
-   for (var i in obj) { 
-      result += objName + "." + i + " = " + obj[i] + "\n"; 
-   } 
-   return result; 
-} 
-
 $(document).ready(function(){
 $("#imgPrecarga").hide();
 /*Opciones de los check*/
