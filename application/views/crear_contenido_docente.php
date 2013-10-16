@@ -191,37 +191,8 @@ input[type=checkbox].css-checkbox.mlg:checked + label.css-label.mlg {
 		<label>Trayecto 4
 		<input name="trayecto4" type="checkbox" id="t4" value="4"></label>-->
 		<hr>
-		<input type="submit" class="btn btn-warning btn-large" value="CONFIRMAR">
-		<script type="text/javascript">
-		$(document).ready(function(){
+		<input id="btn_confirmacion" type="submit" class="btn btn-warning btn-large" value="CONFIRMAR">
 
-			$("#todos").click(function(){
-				
-				if(this.checked){
-					$("#t1").removeAttr("checked");
-					$("#t2").removeAttr("checked");
-					$("#t3").removeAttr("checked");
-					$("#t4").removeAttr("checked");
-					$("#t1").attr("disabled","disabled");
-					$("#t2").attr("disabled","disabled");
-					$("#t3").attr("disabled","disabled");
-					$("#t4").attr("disabled","disabled");
-				}else{
-
-					$("#t1").removeAttr("disabled");
-					$("#t2").removeAttr("disabled");
-					$("#t3").removeAttr("disabled");
-					$("#t4").removeAttr("disabled");
-				}
-			});
-
-			$('input[type=submit]').click(function(){
-				confirm('Esta Seguro de Confirmar este contenido.?\nPorfavor Revise ya que sera publicado.');
-
-			});
-
-		});
-		</script>
 	</div>
 	<!-- fin de barra de opciones-->
 
@@ -231,10 +202,16 @@ input[type=checkbox].css-checkbox.mlg:checked + label.css-label.mlg {
 			<p><b>Creaci&oacute;n de Contenidos</b><br>La informaci&oacute;n generada en esta secci&oacute;n sera publicada en el portal y sera enviado un E-Mail a los alumnos en caso de que asi lo selecciones.</p>
 		<input id="titulo" type="text" class="borde" name="titulo" placeholder="Titulo para identificar su noticia..." required="required">
 		<textarea id="msj_email" class="borde" rows="10" name="contenido" placeholder="Escriba Aqui La Informacion..." required="required"></textarea>
-		<div class="archivo">
-			<input type="file" name="campo_archivo">
+		
+		<div class="archivo"><br>
+			<div id="status">
+				<img id="imgPrecarga" src="<?php echo base_url();?>/img/loader_barra.gif" alt="precarga">
+			</div>
+			<input id="campo_archivo" type="file" name="campo_archivo">
 		</div>
 		</div><!-- Fin del div pantalla docente--> 
+		<!--Agregando Funcionalidad al Loader para los archivos-->
+		<script type="text/javascript" src="<?php echo base_url();?>js/funcionalidadCargador.js"></script>
 	</div><!-- Fin del divde 9 espacios--> 
 
 </form>
