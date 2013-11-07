@@ -18,7 +18,8 @@ class Registro extends CI_Controller {
 		$this->form_validation->set_rules('campo_email', 'Correo Electronico', 'trim|required');
 		$this->form_validation->set_rules('campo_clave', 'Clave', 'trim|required|matches[campo_reclave]|sha1');
 		$this->form_validation->set_rules('campo_trayecto', 'Trayecto', 'required');
-
+		$this->form_validation->set_rules('campo_seccion', 'Secci&oacute;n', 'required');
+		$this->form_validation->set_rules('campo_turno', 'Turno', 'required');
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('cabecera');
@@ -53,6 +54,8 @@ class Registro extends CI_Controller {
                'nombre' => $data['campo_nombre'],
                'apellido' => $data['campo_apellido'],
                'trayecto' => $data['campo_trayecto'],
+               'seccion' => $data['campo_seccion'],
+               'turno' => $data['campo_turno'],
                'fecha' => date('Y-m-d H:i:s'),
                'tipo' => 'E',
                'email' => $data['campo_email']
